@@ -315,9 +315,11 @@
     font-size: 1rem;
     border: 1px solid var(--color-btn-highlight);
     border-radius: 24px;
+    
 }
 
 .explore_shop_heading div>button.active {
+    cursor: pointer;
     background-color: var(--btn-bg);
     color: var(--color-);
 }
@@ -450,14 +452,24 @@
 }
 .ep-content{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     font-size: 1.2rem;
     gap: 2em;
     color:var(--highlight-color);
+    max-width: 90%;
+    margin: auto;
 }
-.ep-content:nth-child(3){
+.ep-content div{
+    display: flex ;
+    align-items: center;
+}
+.ep-content div p{
+    flex-grow: 0.6;
+}
+.ep-content div:nth-of-type(2){
     flex-direction:row-reverse;
 }
 .ep_content img {
@@ -465,6 +477,7 @@
     width: 80%;
     aspect-ratio: 1/1;
     object-fit: cover;
+    flex-grow: 0.3 ;
 }
 
 .ep_content:nth-child(3) img {
